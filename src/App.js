@@ -15,7 +15,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC')
+    axios.get('//api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC')
       .then(response => {
         this.setState({
           gifs: response.data.data,
@@ -28,7 +28,7 @@ export default class App extends Component {
   }
 
   performSearch = (query) => {
-    axios.get(`http://api.giphy.com/v1/gifs/search?q=${query}&limit=32&api_key=dc6zaTOxFJmzC`)
+    axios.get(`//api.giphy.com/v1/gifs/search?q=${query}&limit=32&api_key=dc6zaTOxFJmzC`)
       .then(response => {
         this.setState({
           gifs: response.data.data
